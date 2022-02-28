@@ -156,7 +156,6 @@ body {
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
-	margin: 0 3rem;
 	font-size: 1.4rem;
 }
 .btn {
@@ -183,6 +182,7 @@ body {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 1rem; */
 	display: flex;
+	margin: 1rem;
 }
 .sidebar--left {
 	flex: 1;
@@ -484,6 +484,16 @@ body {
 	font-weight: 600;
 	padding: 1rem 0;
 }
+.playlist__item > h6 {
+	height: 3.3rem;
+	line-height: 2rem;
+	overflow: hidden;
+	display: block;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
 .playlist__item h6:first-child,
 .playlist__title h6:first-child {
 	flex: 1;

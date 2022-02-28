@@ -1,14 +1,15 @@
-@media only screen and (max-width: 80rem) {
-	.sidebar--left,
-	.sidebar--right {
-		display: none;
-	}
-}
 /* PC */
 @media (min-width: 64em) {
 }
 /* PC low resolution--WIDE-L */
 @media (min-width: 63.7375em) and (max-width: 1239px) {
+	.sidebar--right {
+		display: none;
+	}
+	.content {
+		border-top-right-radius: 2rem;
+		border-bottom-right-radius: 2rem;
+	}
 }
 /* Tablet and mobile */
 @media (max-width: 63.7375em) {
@@ -16,8 +17,62 @@
 
 /* Tablet */
 @media (min-width: 46.25em) and (max-width: 63.7375em) {
+	.sidebar--right {
+		display: none;
+	}
+	.content {
+		border-top-right-radius: 2rem;
+		border-bottom-right-radius: 2rem;
+	}
 }
 
 /* Mobile */
 @media (max-width: 46.1875em) {
+	.sidebar--left,
+	.sidebar--right {
+		display: none;
+	}
+	.content {
+		border-radius: 2rem;
+	}
+	.control__act {
+		display: none;
+	}
+}
+@media (max-width: 450px) {
+	.sidebar--left,
+	.sidebar--right {
+		display: none;
+	}
+	.content {
+		border-radius: 2rem;
+	}
+	.control__act {
+		display: none;
+	}
+	.control__menu .control__main > i {
+		padding: 0.5rem;
+	}
+}
+@media (max-width: 325px) {
+	.sidebar--left,
+	.sidebar--right {
+		display: none;
+	}
+	.content {
+		border-radius: 2rem;
+	}
+	.control__act {
+		display: none;
+	}
+	.control__menu .control__main > i {
+		padding: 0.5rem;
+	}
+	.control__menu {
+		padding: 0.5rem;
+	}
+	.control__song,
+	.control__player {
+		padding: 0;
+	}
 }
