@@ -19,16 +19,24 @@
 
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<link rel="stylesheet" href="./assets/css/responsive.css" />
-		<title>Baisc Grid | MYC</title>
+		<title>Music Media Player | MYC</title>
 	</head>
 	<body>
 		<div class="wapper">
 			<div class="sidebar--left">
 				<div class="sidebar">
 					<div class="sidebar__heading">
-						<div class="heading__theme">
-							<i class="fas fa-circle"></i>
-						</div>
+						<label for="toggle-input" class="toggle">
+							<input
+								type="checkbox"
+								name="toggle-input"
+								id="toggle-input"
+								class="toggle__input"
+							/>
+							<div class="toggle__bar">
+								<div class="toggle__spin"></div>
+							</div>
+						</label>
 						<i class="fas fa-stream"></i>
 						<!-- <i class="fas fa-bars"></i> -->
 					</div>
@@ -170,76 +178,26 @@
 						<h6>time</h6>
 					</div>
 					<ul class="playlist__list">
-						<li class="playlist__item">
-							<a href="" class="playlist__link">
-								<h6>01</h6>
-								<h6>ngày tận thế</h6>
-								<h6>tóc tiên</h6>
-								<h6>3:52</h6>
-							</a>
-						</li>
-						<li class="playlist__item">
-							<a href="" class="playlist__link">
-								<h6>02</h6>
-								<h6>có ai thương em như anh</h6>
-								<h6>tóc tiên</h6>
-								<h6>3:51</h6>
-							</a>
-						</li>
-						<li class="playlist__item">
-							<a href="" class="playlist__link">
-								<h6>03</h6>
-								<h6>em đã có người mới</h6>
-								<h6>tóc tiên</h6>
-								<h6>3:20</h6>
-							</a>
-						</li>
-						<li class="playlist__item">
-							<a href="" class="playlist__link">
-								<h6>04</h6>
-								<h6>vũ điệu cồng chiên</h6>
-								<h6>tóc tiên</h6>
-								<h6>3:24</h6>
-							</a>
-						</li>
-						<li class="playlist__item">
-							<a href="" class="playlist__link">
-								<h6>05</h6>
-								<h6>trên trình bạn dưới tình yêu</h6>
-								<h6>min</h6>
-								<h6>3:19</h6>
-							</a>
-						</li>
-						<li class="playlist__item">
-							<a href="" class="playlist__link">
-								<h6>05</h6>
-								<h6>trên trình bạn dưới tình yêu</h6>
-								<h6>min</h6>
-								<h6>3:19</h6>
-							</a>
-						</li>
-						<li class="playlist__item">
-							<a href="" class="playlist__link">
-								<h6>05</h6>
-								<h6>trên trình bạn dưới tình yêu</h6>
-								<h6>min</h6>
-								<h6>3:19</h6>
-							</a>
-						</li>
+						<!-- <i class="fa-solid fa-volume-high"></i> -->
 					</ul>
 					<div class="content__control">
 						<div class="control__menu">
 							<div class="control__act">
-								<i class="far fa-heart"></i>
+								<i class="fas fa-heart js-heart"></i>
 								<i class="fas fa-music"></i>
 								<i class="fas fa-expand-alt"></i>
 							</div>
 							<div class="control__main">
-								<i class="fas fa-undo-alt"></i>
-								<i class="fas fa-fast-backward"></i>
-								<i class="fas fa-play-circle"></i>
-								<i class="fas fa-fast-forward"></i>
-								<i class="fas fa-random"></i>
+								<i class="fas fa-undo-alt js-repeat"></i>
+								<i class="fas fa-fast-backward js-prev"></i>
+								<div class="control__player">
+									<i
+										class="fas fa-play-circle js-playing"
+									></i>
+									<i class="fas fa-pause js-pausing"></i>
+								</div>
+								<i class="fas fa-fast-forward js-next"></i>
+								<i class="fas fa-random js-random"></i>
 							</div>
 							<div class="control__volumm">
 								<i class="fas fa-volume-down"></i>
@@ -248,11 +206,30 @@
 							</div>
 						</div>
 						<div class="control__song">
-							<span class="control__timerleft">0:00</span>
-							<input type="range" name="range" id="range" />
-							<span class="control__timerright">3:52</span>
+							<span class="control__timerleft js-duration"
+								>00:00</span
+							>
+							<input
+								type="range"
+								name="range"
+								id="range"
+								min="0"
+								max="100"
+								value="0"
+							/>
+							<span class="control__timerright js-remaining"
+								>00:00</span
+							>
 						</div>
 					</div>
+					<audio
+						id="audio"
+						value="0"
+						step="1"
+						min="0"
+						max="100"
+						src=""
+					></audio>
 				</div>
 			</div>
 			<div class="sidebar--right">
@@ -411,5 +388,6 @@
             <img class="layout-img" src="https://thuthuatnhanh.com/wp-content/uploads/2019/07/anh-girl-xinh-co-trang-trung-quoc-4-1.jpg" alt="">
         </div>
     </div> -->
+		<script src="./js/script.js"></script>
 	</body>
 </html>

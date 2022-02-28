@@ -4,3 +4,20 @@
 		display: none;
 	}
 }
+/* PC */
+@media (min-width: 64em) {
+}
+/* PC low resolution--WIDE-L */
+@media (min-width: 63.7375em) and (max-width: 1239px) {
+}
+/* Tablet and mobile */
+@media (max-width: 63.7375em) {
+}
+
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 63.7375em) {
+}
+
+/* Mobile */
+@media (max-width: 46.1875em) {
+}
