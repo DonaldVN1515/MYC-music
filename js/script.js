@@ -12,6 +12,8 @@ const randomBtn = $('.js-random');
 const nameSong = $('.playlist__name');
 const remainingTime = $('.js-remaining');
 const durationTime = $('.js-duration');
+const volumeBtn = $('#volume');
+
 const audio = $('#audio');
 const progress = $('#range');
 
@@ -271,6 +273,9 @@ const app = {
 		repeatBtn.onclick = function () {
 			_this.isRepeat = !_this.isRepeat;
 			repeatBtn.classList.toggle('js-active', _this.isRepeat);
+		};
+		volumeBtn.onchange = function () {
+			audio.volume = volumeBtn.value / 100;
 		};
 		playList.onclick = function (e) {
 			const songNode = e.target.closest(
